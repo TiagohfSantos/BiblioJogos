@@ -29,20 +29,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            class MainActivity : ComponentActivity() {
-                override fun onCreate(savedInstanceState: Bundle?) {
-                    super.onCreate(savedInstanceState)
-                    enableEdgeToEdge()
-                    setContent {
-                        BiblioJogosTheme {
-                            AppNavHost()
-                        }
-                    }
-                }
+            BiblioJogosTheme {
+                AppNavHost()
             }
         }
-
-
     }
 }
 
