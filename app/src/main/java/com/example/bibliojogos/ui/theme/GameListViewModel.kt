@@ -10,11 +10,11 @@ import kotlinx.coroutines.flow.stateIn
 
 
 class GameListViewModel(private val repository: GameRepo) : ViewModel() {
-
     val games: StateFlow<List<Game>> = repository.allGames
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
             initialValue = emptyList()
         )
+
 }
